@@ -224,3 +224,25 @@ h2 {
         }
     }
 }
+
+
+/*Animations*/
+
+.top {
+    animation: fadeIn 2s forwards;
+}
+
+.bottom {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
