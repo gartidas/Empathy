@@ -21,7 +21,7 @@ body {
 
 .hero-bg {
     background: white url('../images/empathy.png');
-    background-position: 50% 33%;
+    background-position: 50% 30%;
     background-size: 130%;
     background-repeat: no-repeat;
     color: rgb(83, 25, 160);
@@ -170,8 +170,8 @@ h2 {
         margin: 2em -4em 0;
     }
     .hero-bg {
-        background-size: 120%;
-        background-position: 50% 33%;
+        background-size: 110%;
+        background-position: 50% 30%;
     }
     .hero-bg p {
         margin-top: 15em;
@@ -181,8 +181,8 @@ h2 {
 @media(min-width:930px) {
     .hero-bg {
         text-align: left;
-        background-size: 90%;
-        background-position: 50% 32%;
+        background-size: 80%;
+        background-position: 50% 30%;
     }
     .hero-bg section {
         width: 65%;
@@ -216,7 +216,7 @@ h2 {
     }
     @media(min-width:1300px) {
         .hero-bg {
-            background-size: 80%;
+            background-size: 70%;
             background-position: 50% 32%;
         }
         .hero-bg p {
