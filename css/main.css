@@ -171,6 +171,7 @@ h2 {
     place-content: center;
     display: none;
     opacity: 0;
+    position: fixed;
 }
 
 @media(min-width:730px) {
