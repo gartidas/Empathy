@@ -14,9 +14,12 @@ body {
     margin: 0;
 }
 
-.footer {
+.footer p {
     text-align: right;
-    margin-right: 1em;
+    padding-right: 1em;
+    background: black;
+    color: white;
+    margin-top: -.25em;
 }
 
 .hero-bg {
@@ -166,17 +169,14 @@ input[type=button]:hover {
 
 .bottom {
     margin: 0;
-}
-
-img {
-    width: 100%;
-}
-
-.left-join-us {
     text-align: center;
     color: rgb(83, 25, 160);
     margin: 3em, 1em;
     font-weight: bold;
+}
+
+img {
+    width: 100%;
 }
 
 h2 {
@@ -242,7 +242,7 @@ h2 {
         margin-top: -1em;
         width: 30%;
     }
-    .bottom img {
+    .footer img {
         visibility: hidden;
         height: 0;
         width: 0;
@@ -254,6 +254,10 @@ h2 {
     .form-bottom p {
         margin-top: 0;
         margin-bottom: .5em;
+    }
+    .footer p {
+        color: black;
+        background: white;
     }
 }
 
@@ -275,6 +279,10 @@ h2 {
 }
 
 .bottom {
+    animation: fadeIn 2s forwards;
+}
+
+.footer {
     animation: fadeIn 2s forwards;
 }
 
