@@ -19,7 +19,8 @@ body {
     padding-right: 1em;
     background: rgb(0, 0, 69);
     color: white;
-    margin-top: -.27em;
+    margin-top: -.3em;
+    z-index: 1;
 }
 
 .hero-bg {
