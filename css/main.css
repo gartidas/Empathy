@@ -17,9 +17,9 @@ body {
 .footer p {
     text-align: right;
     padding-right: 1em;
-    background: black;
+    background: rgb(0, 0, 69);
     color: white;
-    margin-top: -.25em;
+    margin-top: -.27em;
 }
 
 .hero-bg {
