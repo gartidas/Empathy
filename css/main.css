@@ -17,23 +17,52 @@ body {
 .nav {
     position: fixed;
     z-index: 5;
-    right: -10em;
+    right: -5em;
     top: 0;
     display: flex;
 }
 
 .navbar {
     height: 100vh;
-    width: 10em;
+    width: 5em;
     background-color: rgb(83, 25, 160);
 }
 
-.footer p {
+.navbar p {
     text-align: center;
-    background: rgb(0, 0, 69);
     color: white;
-    margin-top: -1em;
-    z-index: 1;
+    font-size: 1.2rem;
+    bottom: 0;
+    position: fixed;
+}
+
+.button-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar input[type=submit] {
+    background-color: rgb(83, 25, 160);
+    width: 5em;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .2em;
+    margin-bottom: 1em;
+}
+
+.navbar input[type=submit]:hover {
+    background-color: rgb(60, 7, 131);
+}
+
+.button-list {
+    margin-top: 1em;
+}
+
+.author-name {
+    font-weight: bold;
 }
 
 .footer img {
@@ -288,11 +317,6 @@ h2 {
         margin-top: 0;
         margin-bottom: .5em;
     }
-    .footer p {
-        color: black;
-        background: white;
-        margin-top: 4em;
-    }
 }
 
 @media(min-width:1300px) {
@@ -325,11 +349,11 @@ h2 {
 }
 
 .animation-showNavBar {
-    animation: showNavBar 3s forwards;
+    animation: showNavBar 2s forwards;
 }
 
 .animation-hideNavBar {
-    animation: hideNavBar 3s forwards;
+    animation: hideNavBar 2s forwards;
 }
 
 @keyframes fadeIn {
@@ -363,13 +387,13 @@ h2 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-10em);
+        transform: translateX(-5em);
     }
 }
 
 @keyframes hideNavBar {
     from {
-        transform: translateX(-10em);
+        transform: translateX(-5em);
     }
     to {
         transform: translateX(0);
