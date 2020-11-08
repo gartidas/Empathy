@@ -2,6 +2,7 @@
 let loginBtn = document.getElementById('login-btn');
 let showNavBtn = document.getElementById('show-nav-btn');
 let overlay = document.getElementById('overlay');
+let navbarOverlay = document.getElementById('navbar-overlay');
 let nav = document.getElementById('nav');
 let username = document.getElementById('username');
 let password = document.getElementById('password');
@@ -27,13 +28,33 @@ loginBtn.addEventListener('click', () => {
 
 showNavBtn.addEventListener('click', () => {
     if (opened) {
-        nav.classList.remove('animation-showNavBar')
-        nav.classList.add('animation-hideNavBar')
-        opened = false;
+        closeNavbar();
     } else {
-        nav.classList.add('animation-showNavBar')
-        nav.classList.remove('animation-hideNavBar')
-        opened = true;
+        openNavbar();
     }
 
 }, false)
+
+navbarOverlay.addEventListener('click', () => {
+    if (opened) {
+        closeNavbar();
+    }
+}, false)
+
+function openNavbar() {
+    nav.classList.add('animation-showNavBar')
+    nav.classList.remove('animation-hideNavBar')
+    navbarOverlay.style.display = 'grid';
+    navbarOverlay.classList.add('animation-showNavBarOverlay')
+    navbarOverlay.classList.remove('animation-hideNavBarOverlay')
+    opened = true;
+}
+
+function closeNavbar() {
+    nav.classList.remove('animation-showNavBar')
+    nav.classList.add('animation-hideNavBar')
+    navbarOverlay.classList.remove('animation-showNavBarOverlay')
+    navbarOverlay.classList.add('animation-hideNavBarOverlay')
+    navbarOverlay.style.display = 'none';
+    opened = false;
+}
