@@ -1,10 +1,13 @@
 /*Variables*/
-let btn = document.getElementById('login-btn');
+let loginBtn = document.getElementById('login-btn');
+let showNavBtn = document.getElementById('show-nav-btn');
 let overlay = document.getElementById('overlay');
+let nav = document.getElementById('nav');
 let username = document.getElementById('username');
 let password = document.getElementById('password');
+let opened = false;
 
-btn.addEventListener('click', () => {
+loginBtn.addEventListener('click', () => {
     var usernameValue = username.value;
     var passwordValue = password.value;
 
@@ -18,6 +21,19 @@ btn.addEventListener('click', () => {
             overlay.classList.remove('animation-overlay')
 
         }, 5000);
+    }
+
+}, false)
+
+showNavBtn.addEventListener('click', () => {
+    if (opened) {
+        nav.classList.remove('animation-showNavBar')
+        nav.classList.add('animation-hideNavBar')
+        opened = false;
+    } else {
+        nav.classList.add('animation-showNavBar')
+        nav.classList.remove('animation-hideNavBar')
+        opened = true;
     }
 
 }, false)
