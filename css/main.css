@@ -17,14 +17,14 @@ body {
 .nav {
     position: fixed;
     z-index: 5;
-    right: -5em;
+    right: -10em;
     top: 0;
     display: flex;
 }
 
 .navbar {
     height: 100vh;
-    width: 5em;
+    width: 10em;
     background-color: rgb(83, 25, 160);
 }
 
@@ -34,6 +34,9 @@ body {
     font-size: 1.2rem;
     bottom: 0;
     position: fixed;
+    margin-bottom: .5em;
+    align-content: center;
+    padding: 1em;
 }
 
 .button-list {
@@ -45,11 +48,11 @@ body {
 
 .navbar input[type=submit] {
     background-color: rgb(83, 25, 160);
-    width: 5em;
+    width: 10em;
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    padding: .2em;
+    padding: .5em 2.5em .5em 2.5em;
     margin-bottom: 1em;
 }
 
@@ -58,7 +61,7 @@ body {
 }
 
 .button-list {
-    margin-top: 1em;
+    margin-top: 4em;
 }
 
 .author-name {
@@ -349,11 +352,11 @@ h2 {
 }
 
 .animation-showNavBar {
-    animation: showNavBar 2s forwards;
+    animation: showNavBar .2s forwards;
 }
 
 .animation-hideNavBar {
-    animation: hideNavBar 2s forwards;
+    animation: hideNavBar .2s forwards;
 }
 
 @keyframes fadeIn {
@@ -387,13 +390,13 @@ h2 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-5em);
+        transform: translateX(-10em);
     }
 }
 
 @keyframes hideNavBar {
     from {
-        transform: translateX(-5em);
+        transform: translateX(-10em);
     }
     to {
         transform: translateX(0);
