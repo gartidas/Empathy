@@ -1,287 +1,262 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-}
-
-.nav {
-    position: fixed;
-    z-index: 5;
-    right: -10em;
-    top: 0;
-    display: flex;
-}
-
-.navbar {
-    height: 100vh;
-    width: 10em;
-    background-color: rgb(83, 25, 160);
-}
-
-.navbar p {
-    text-align: center;
-    color: white;
-    font-size: 1.2rem;
-    bottom: 0;
-    position: fixed;
-    margin-bottom: .5em;
-    align-content: center;
-    padding: 1em;
-}
-
-.button-list {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4em;
-}
-
-.navbar input[type=submit] {
-    background-color: rgb(83, 25, 160);
-    width: 10em;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 1em 2.5em 1em 2.5em;
-    margin-bottom: 1em;
-}
-
-.navbar input[class=home-btn] {
-    background: url('../images/home.png') no-repeat;
-    background-position: .2em 50%;
-    background-size: 2em 2em;
-}
-
-.navbar input[class=register-btn] {
-    background: url('../images/register.png') no-repeat;
-    background-position: .2em 50%;
-    background-size: 2em 2em;
-}
-
-.navbar input[type=submit]:hover {
-    background-color: rgb(60, 7, 131);
-}
-
-.author-name {
-    font-weight: bold;
-}
-
-.footer img {
-    margin-bottom: -2em;
-}
-
-.footer p {
-    opacity: 0;
-    display: none;
-}
-
-.hero-bg {
-    background: white url('../images/empathy.png');
-    background-position: 50% 30%;
-    background-size: 130%;
-    background-repeat: no-repeat;
-    color: rgb(83, 25, 160);
-    text-align: center;
-    padding-bottom: 4em;
-}
-
-header {
-    padding-top: 1em;
-    padding-bottom: 3em;
-    text-align: left;
-    margin-left: 1em;
-}
-
-input[class=show-nav-btn] {
-    width: 4em;
-    height: 3em;
-    margin-top: 1em;
-    border: none;
-    padding: .3em;
-    border-radius: 1em 0 0 1em;
-    cursor: pointer;
-    background: rgb(83, 25, 160) url('../images/menu.png') no-repeat;
-    background-position: center;
-}
-
-input[class=show-nav-btn]:hover {
-    background-color: rgb(60, 7, 131);
-}
-
-.hero-bg a {
-    color: rgb(83, 25, 160);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-section {
-    margin: 0 1em;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h1 span {
-    text-transform: uppercase;
-    font-size: 2rem;
-    padding-right: 0.3em;
-}
-
-.line1::before {
-    content: ' ';
-    position: absolute;
-    width: 3em;
-    background: rgb(83, 25, 160);
-    height: .2em;
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    margin-left: -1.1em;
-}
-
-.line2::before {
-    content: ' ';
-    position: absolute;
-    width: 3em;
-    background: rgb(83, 25, 160);
-    height: .2em;
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-left: 1.4em;
-}
-
-.about {
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 2em;
-    margin-top: 15em;
-}
-
-.form-container {
-    background-color: rgb(255, 240, 252);
-    margin: 2em -1em 0;
-    padding: 2em;
-}
-
-.form-container p {
-    color: rgb(25, 83, 160);
-    font-weight: bold;
-    margin-top: 2em;
-}
-
-.form-container a {
-    color: rgb(25, 83, 160);
-    font-weight: bold;
-    margin-top: 5em;
-    width: fit-content;
-}
-
-.form-bottom {
-    text-align: center;
-}
-
-.form-container a:hover {
-    color: rgb(11, 55, 112);
-}
-
-label {
-    color: rgb(25, 83, 160);
-    font-weight: bold;
-    display: block;
-    margin: -1em 0 .3em;
-}
-
-input[class=username] {
-    border: 1px solid grey;
-    width: 100%;
-    padding: .3em;
-    border-radius: 3em;
-    font-weight: bold;
-    box-sizing: border-box;
-    margin-bottom: 2em;
-}
-
-input[class=password] {
-    border: 1px solid grey;
-    width: 100%;
-    padding: .3em;
-    border-radius: 3em;
-    margin-bottom: 1em;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-
-input[class=login-btn] {
-    background-color: rgb(226, 131, 213);
-    width: 100%;
-    height: 3em;
-    border: none;
-    padding: .3em;
-    border-radius: 1em;
-    margin-bottom: -1em;
-    font-weight: 1000;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-input[class=login-btn]:hover {
-    background-color: rgb(224, 114, 210);
-}
-
-.bottom {
-    margin: 0;
-    text-align: center;
-    color: rgb(83, 25, 160);
-    margin: 3em, 1em;
-    font-weight: bold;
-}
-
-img {
-    width: 100%;
-}
-
-h2 {
-    font-weight: 1000;
-}
-
-.overlay {
-    height: 100vh;
-    width: 100%;
-    background: rgba(0, 0, 0, .9);
-    z-index: 10;
-    place-content: center;
-    display: none;
-    opacity: 0;
-    position: fixed;
-}
-
-.navbar-overlay {
-    height: 100vh;
-    width: 100%;
-    background: rgba(0, 0, 0, .9);
-    z-index: 4;
-    position: fixed;
-    display: none;
-    opacity: 0;
+@media(min-width:0px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+    }
+    .nav {
+        position: fixed;
+        z-index: 5;
+        right: -10em;
+        top: 0;
+        display: flex;
+    }
+    .navbar {
+        height: 100vh;
+        width: 10em;
+        background-color: rgb(83, 25, 160);
+    }
+    .navbar p {
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+        bottom: 0;
+        position: fixed;
+        margin-bottom: .5em;
+        align-content: center;
+        padding: 1em;
+    }
+    .button-list {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4em;
+    }
+    .navbar input[class=home-btn] {
+        background: url('../images/home.png') no-repeat;
+    }
+    .navbar input[class=register-btn] {
+        background: url('../images/register.png') no-repeat;
+    }
+    .navbar input[type=submit] {
+        background-color: rgb(83, 25, 160);
+        width: 10em;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 1em 2.5em 1em 2.5em;
+        margin-bottom: 1em;
+        background-position: 50% 50%;
+        background-size: 2em 2em;
+    }
+    .navbar input[type=submit]:hover {
+        background-color: rgb(60, 7, 131);
+    }
+    .author-name {
+        font-weight: bold;
+    }
+    .footer img {
+        margin-bottom: -2em;
+    }
+    .footer p {
+        opacity: 0;
+        display: none;
+    }
+    .hero-bg {
+        background: white url('../images/empathy.png');
+        background-position: 50% 30%;
+        background-size: 130%;
+        background-repeat: no-repeat;
+        color: rgb(83, 25, 160);
+        text-align: center;
+        padding-bottom: 4em;
+    }
+    header {
+        padding-top: 1em;
+        padding-bottom: 3em;
+        text-align: left;
+        margin-left: 1em;
+    }
+    input[class=show-nav-btn] {
+        width: 4em;
+        height: 3em;
+        margin-top: 1em;
+        border: none;
+        padding: .3em;
+        border-radius: 1em 0 0 1em;
+        cursor: pointer;
+        background: rgb(83, 25, 160) url('../images/menu.png') no-repeat;
+        background-position: center;
+    }
+    input[class=show-nav-btn]:hover {
+        background-color: rgb(60, 7, 131);
+    }
+    .hero-bg a {
+        color: rgb(83, 25, 160);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    section {
+        margin: 0 1em;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h1 span {
+        text-transform: uppercase;
+        font-size: 2rem;
+        padding-right: 0.3em;
+    }
+    .line1::before {
+        content: ' ';
+        position: absolute;
+        width: 3em;
+        background: rgb(83, 25, 160);
+        height: .2em;
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-left: -1.1em;
+    }
+    .line2::before {
+        content: ' ';
+        position: absolute;
+        width: 3em;
+        background: rgb(83, 25, 160);
+        height: .2em;
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-left: 1.4em;
+    }
+    .about {
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 2em;
+        margin-top: 15em;
+    }
+    .form-container {
+        background-color: rgb(255, 240, 252);
+        margin: 2em -1em 0;
+        padding: 2em;
+    }
+    .form-container p {
+        color: rgb(25, 83, 160);
+        font-weight: bold;
+        margin-top: 2em;
+    }
+    .form-container a {
+        color: rgb(25, 83, 160);
+        font-weight: bold;
+        margin-top: 5em;
+        width: fit-content;
+    }
+    .form-bottom {
+        text-align: center;
+    }
+    .form-container a:hover {
+        color: rgb(11, 55, 112);
+    }
+    label {
+        color: rgb(25, 83, 160);
+        font-weight: bold;
+        display: block;
+        margin: -1em 0 .3em;
+    }
+    input[class=username] {
+        border: 1px solid grey;
+        width: 100%;
+        padding: .3em;
+        border-radius: 3em;
+        font-weight: bold;
+        box-sizing: border-box;
+        margin-bottom: 2em;
+    }
+    input[class=password] {
+        border: 1px solid grey;
+        width: 100%;
+        padding: .3em;
+        border-radius: 3em;
+        margin-bottom: 1em;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+    input[class=login-btn] {
+        background-color: rgb(226, 131, 213);
+        width: 100%;
+        height: 3em;
+        border: none;
+        padding: .3em;
+        border-radius: 1em;
+        margin-bottom: -1em;
+        font-weight: 1000;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    input[class=login-btn]:hover {
+        background-color: rgb(224, 114, 210);
+    }
+    .bottom {
+        margin: 0;
+        text-align: center;
+        color: rgb(83, 25, 160);
+        margin: 3em, 1em;
+        font-weight: bold;
+    }
+    img {
+        width: 100%;
+    }
+    h2 {
+        font-weight: 1000;
+    }
+    .overlay {
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, .9);
+        z-index: 10;
+        place-content: center;
+        display: none;
+        opacity: 0;
+        position: fixed;
+    }
+    .navbar-overlay {
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, .9);
+        z-index: 4;
+        position: fixed;
+        display: none;
+        opacity: 0;
+    }
+    /*Animations- mobile*/
+    .animation-showNavBar {
+        animation: showNavBar .2s forwards;
+    }
+    .animation-hideNavBar {
+        animation: hideNavBar .2s forwards;
+    }
+    .animation-showNavBarOverlay {
+        animation: showNavBarOverlay .5s forwards;
+    }
+    .animation-hideNavBarOverlay {
+        animation: hideNavBarOverlay .5s forwards;
+    }
 }
 
 @media(min-width:730px) {
@@ -396,10 +371,9 @@ h2 {
         color: rgb(25, 83, 160);
     }
     .navbar input[type=submit] {
-        font-size: 1rem;
-        font-weight: bold;
         margin-bottom: 0;
         height: 4em;
+        padding: 0 5em 0 5em;
     }
 }
 
@@ -417,7 +391,7 @@ h2 {
 }
 
 
-/*Animations*/
+/*Animations- all devices*/
 
 .top {
     animation: fadeIn 2s forwards;
@@ -435,21 +409,8 @@ h2 {
     animation: overlay 5s forwards;
 }
 
-.animation-showNavBar {
-    animation: showNavBar .2s forwards;
-}
 
-.animation-hideNavBar {
-    animation: hideNavBar .2s forwards;
-}
-
-.animation-showNavBarOverlay {
-    animation: showNavBarOverlay .5s forwards;
-}
-
-.animation-hideNavBarOverlay {
-    animation: hideNavBarOverlay .5s forwards;
-}
+/*Animations- definition*/
 
 @keyframes fadeIn {
     from {
