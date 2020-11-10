@@ -48,6 +48,9 @@
     .navbar input[class=register-btn] {
         background: url('../images/register.png') no-repeat;
     }
+    .navbar input[class=contact-btn] {
+        background: url('../images/contact.png') no-repeat;
+    }
     .navbar input[type=submit] {
         background-color: rgb(83, 25, 160);
         width: 10em;
