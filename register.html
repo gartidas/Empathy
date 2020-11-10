@@ -4,15 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5319A0">
     <title>Empathy</title>
     <link rel="stylesheet" href="css/register.css">
+    <link rel="image_src" href="images/thumbnail.png" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 
 <body>
+    <div class="navbar-overlay" id="navbar-overlay">
+    </div>
+
     <div class="hero-bg">
         <header>
             <a href="index.html">Empathy</a>
+
+            <div class="nav" id="nav">
+                <input type="button" class="show-nav-btn" id="show-nav-btn" value="">
+                <div class="navbar" id="navbar">
+                    <form class="button-list">
+                        <input type="submit" class="home-btn" value="" formaction="/index.html" title="Home">
+
+                        <input type="submit" class="register-btn" value="" formaction="/register.html" title="Register">
+                    </form>
+
+
+                    <p>
+                        Author: <span class="author-name">Adam Haríň</span> ©2020
+                    </p>
+                </div>
+            </div>
         </header>
 
         <img src="images/WIP.png" alt="Picure of construction site">
@@ -25,6 +46,15 @@
             I'm working on it...
         </h2>
     </div>
+
+    <div class="footer">
+
+        <p>
+            Author: <span class="author-name">Adam Haríň</span> ©2020
+        </p>
+    </div>
+
+    <script type="text/javascript" src="js/register.js"></script>
 </body>
 
 </html>
