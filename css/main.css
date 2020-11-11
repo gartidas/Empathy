@@ -88,7 +88,7 @@
         padding-top: 1em;
         padding-bottom: 3em;
         text-align: left;
-        margin-left: 1em;
+        padding-left: 1em;
     }
     input[class=show-nav-btn] {
         width: 4em;
@@ -344,6 +344,7 @@
         display: none;
     }
     .navbar {
+        width: 0em;
         height: 4em;
         z-index: 1;
     }
@@ -367,7 +368,6 @@
         margin-left: 0;
         padding-left: 1em;
         margin-bottom: 5em;
-        width: 100vw;
         padding-top: 0;
     }
     .form-container a {

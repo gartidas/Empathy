@@ -72,7 +72,7 @@
         padding-top: 1em;
         padding-bottom: 3em;
         text-align: left;
-        margin-left: 1em;
+        padding-left: 1em;
     }
     input[class=show-nav-btn] {
         width: 4em;
@@ -89,9 +89,9 @@
         background-color: rgb(60, 7, 131);
     }
     .hero-bg {
-        color: rgb(83, 25, 160);
-        text-align: center;
-        padding-bottom: 4em;
+        background: url('../images/landscape.jpg') no-repeat;
+        background-size: 100vw;
+        border-radius: 0 0 60% 60%;
     }
     .hero-bg a {
         color: rgb(83, 25, 160);
@@ -99,15 +99,57 @@
         font-weight: bold;
         font-size: 2rem;
     }
-    .hero-bg img {
-        width: 60vw;
-    }
     h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1em;
+        text-align: center;
+        color: rgb(60, 7, 131);
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 3em;
     }
-    h2 {
-        font-size: 1.5rem;
+    .phone-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 2em;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95vw;
+        font-size: 1.3rem;
+    }
+    .contact-container {
+        margin: 1em 1em 0 1em;
+        background: rgb(245, 241, 241);
+        box-shadow: 10px 10px 10px lightgray;
+        padding: 1em;
+        width: 100%;
+    }
+    .help-center {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    .working-hours {
+        width: 18em;
+        border-spacing: 0;
+        text-align: center;
+        margin: auto;
+    }
+    .days {
+        text-align: left;
+    }
+    .hours {
+        color: rgb(83, 25, 160);
+        font-weight: bold;
+    }
+    .contact-container a {
+        text-decoration: none;
+        color: black;
     }
     .footer p {
         opacity: 0;
@@ -137,6 +179,15 @@
     }
 }
 
+@media(min-width:580px) {
+    .content {
+        width: 80vw;
+    }
+    .contact-container {
+        width: 21em;
+    }
+}
+
 @media(min-width:930px) {
     .footer p {
         opacity: 1;
@@ -160,6 +211,7 @@
         display: none;
     }
     .navbar {
+        width: 0em;
         height: 4em;
         z-index: 1;
     }
@@ -183,8 +235,11 @@
         margin-left: 0;
         padding-left: 1em;
         margin-bottom: 5em;
-        width: 100vw;
         padding-top: 0;
+    }
+    h1 {
+        margin-top: 2em;
+        font-size: 4rem;
     }
     .navbar input[type=submit] {
         margin-bottom: 0;
@@ -196,6 +251,9 @@
 @media(min-width:1300px) {
     .button-list {
         margin-right: 5em;
+    }
+    .contact-container {
+        padding: 2em;
     }
     .footer {
         margin-top: 10em;
