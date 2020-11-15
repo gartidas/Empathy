@@ -290,7 +290,33 @@
 }
 
 
+/*Animations- all devices*/
+
+.top {
+    animation: fadeIn 2s forwards;
+}
+
+.content {
+    animation: fadeIn 2s forwards;
+}
+
+.footer {
+    animation: fadeIn 2s forwards;
+}
+
+
 /*Animations- definition*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes showNavBar {
     from {
