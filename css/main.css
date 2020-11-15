@@ -391,6 +391,13 @@
     .button-list {
         margin-right: 5em;
     }
+    .form-left {
+        width: 50%;
+    }
+    input[class=login-btn] {
+        margin-left: 9em;
+        width: 25%;
+    }
 }
 
 
