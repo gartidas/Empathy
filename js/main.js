@@ -12,6 +12,8 @@ let opened = false;
 loginBtn.addEventListener('click', () => {
     var usernameValue = username.value;
     var passwordValue = password.value;
+    username.placeholder = '';
+    password.placeholder = '';
 
     if (usernameValue && passwordValue) {
         overlay.style.display = 'grid';
@@ -23,6 +25,12 @@ loginBtn.addEventListener('click', () => {
             overlay.classList.remove('animation-overlay')
 
         }, 5000);
+    }
+    if (!usernameValue) {
+        username.placeholder = " I'm so empty :(";
+    }
+    if (!passwordValue) {
+        password.placeholder = " I'm so empty :(";
     }
 
 }, false)
