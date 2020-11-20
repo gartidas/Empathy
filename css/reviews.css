@@ -92,9 +92,9 @@
         background-color: rgb(60, 7, 131);
     }
     .hero-bg {
-        color: rgb(83, 25, 160);
-        text-align: center;
-        padding-bottom: 4em;
+        background: url('../images/landscape2.jpg') no-repeat;
+        background-size: 100vw 18em;
+        border-radius: 0 0 60% 60%;
     }
     .hero-bg a {
         color: rgb(83, 25, 160);
@@ -102,15 +102,52 @@
         font-weight: bold;
         font-size: 2rem;
     }
-    .hero-bg img {
-        width: 60vw;
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     h1 {
-        font-size: 2.5rem;
+        font-weight: bold;
+        font-size: 2rem;
+        color: rgb(83, 25, 160);
+        text-align: center;
+    }
+    .rating-img {
+        width: 3.5em;
+        height: 3.5em;
+        margin-bottom: 3em;
+    }
+    .content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .review {
+        background: rgb(245, 241, 241);
+        margin: 2em;
+        padding: 1em;
+        width: 100%;
+        box-shadow: 10px 10px 10px lightgray;
+    }
+    .reviewer {
+        display: flex;
+        flex-direction: row;
         margin-bottom: 1em;
     }
-    h2 {
-        font-size: 1.5rem;
+    .reviewer-photo {
+        border-radius: 50%;
+        width: 5em;
+        height: 5em;
+    }
+    h3 {
+        font-size: 1rem;
+        margin-left: 1em;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     .footer p {
         opacity: 0;
@@ -173,6 +210,10 @@
         margin-right: 3em;
         margin-top: 0;
     }
+    .hero-bg {
+        background-position: 0 80%;
+        background-size: 100vw 20em;
+    }
     .hero-bg a {
         color: white;
         margin-top: .5em;
@@ -194,19 +235,57 @@
         height: 4em;
         padding: 0 5em 0 5em;
     }
+    h1 {
+        font-size: 4rem;
+    }
+    .review {
+        width: 80%;
+    }
 }
 
 @media(min-width:1300px) {
     .button-list {
         margin-right: 5em;
     }
+    .review {
+        width: 60%;
+    }
     .footer {
         margin-top: 10em;
+    }
+    .hero-bg {
+        background-position: 0 90%;
     }
 }
 
 
+/*Animations- all devices*/
+
+.top {
+    animation: fadeIn 2s forwards;
+}
+
+.content {
+    animation: fadeIn 2s forwards;
+}
+
+.footer {
+    animation: fadeIn 2s forwards;
+}
+
+
 /*Animations- definition*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes showNavBar {
     from {
