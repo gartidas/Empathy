@@ -27,10 +27,10 @@ loginBtn.addEventListener('click', () => {
         }, 5000);
     }
     if (!usernameValue) {
-        username.placeholder = " I'm so empty :(";
+        username.placeholder = "I'm so empty :(";
     }
     if (!passwordValue) {
-        password.placeholder = " I'm so empty :(";
+        password.placeholder = "I'm so empty :(";
     }
 
 }, false)

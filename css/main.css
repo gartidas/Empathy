@@ -192,6 +192,7 @@
         font-weight: bold;
         box-sizing: border-box;
         margin-bottom: 2em;
+        padding-left: .6em;
     }
     input[class=password] {
         border: 1px solid grey;
@@ -201,6 +202,7 @@
         margin-bottom: 1em;
         font-weight: bold;
         box-sizing: border-box;
+        padding-left: .6em;
     }
      ::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
