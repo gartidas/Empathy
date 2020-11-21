@@ -4,7 +4,8 @@ let navbarOverlay = document.getElementById('navbar-overlay');
 let nav = document.getElementById('nav');
 let opened = false;
 
-let content = document.getElementById('content');
+let reviews = document.getElementById('reviews');
+let loadingSpinner = document.getElementById('loading-spinner');
 
 showNavBtn.addEventListener('click', () => {
     if (opened) {
@@ -27,6 +28,17 @@ window.addEventListener('load', (event) => {
         getReviewerData(),
         getReviewerData()
     ])
+});
+
+window.addEventListener('scroll', (event) => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (clientHeight + scrollTop >= scrollHeight - 5) {
+        loadingSpinner.classList.add('animation-loadReviews');
+        Promise.all([setTimeout(() => {
+            loadingSpinner.classList.remove('animation-loadReviews');
+            getReviewerData();
+        }, 1000)]);
+    }
 });
 
 function openNavbar() {
@@ -64,5 +76,5 @@ function createReview(reviewerData) {
     const review = document.createElement('div');
     review.classList.add('review');
     review.innerHTML = `<div class="reviewer" id="reviewer"><img src="${reviewerData.picture}" alt="Reviewers profile photo" class="reviewer-photo" id="reviewer-photo"><h3 class="reviewer-name" id="reviewer-name">${reviewerData.name}</h3></div><p class="lorem sm">${reviewerData.reviewMessage}</p>`;
-    content.appendChild(review);
+    reviews.appendChild(review);
 }
