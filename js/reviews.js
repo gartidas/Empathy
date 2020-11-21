@@ -22,22 +22,18 @@ navbarOverlay.addEventListener('click', () => {
     }
 }, false)
 
-window.addEventListener('load', (event) => {
-    Promise.all([
+window.addEventListener('load', async(event) => {
+    await Promise.all([
         getReviewerData(),
         getReviewerData(),
         getReviewerData()
     ])
 });
 
-window.addEventListener('scroll', (event) => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (clientHeight + scrollTop >= scrollHeight - 5) {
+window.addEventListener('scroll', async(event) => {
+    if (elementInViewport(loadingSpinner)) {
         loadingSpinner.classList.add('animation-loadReviews');
-        Promise.all([setTimeout(() => {
-            loadingSpinner.classList.remove('animation-loadReviews');
-            getReviewerData();
-        }, 1000)]);
+        await getReviewerData();
     }
 });
 
@@ -60,7 +56,7 @@ function closeNavbar() {
 }
 
 async function getReviewerData() {
-    const userResponse = await fetch('https://randomuser.me/api/');
+    const userResponse = await fetch('https://randomuser.me/api?results=1');
     const userJson = await userResponse.json();
     const name = userJson.results[0].name.first + " " + userJson.results[0].name.last;
     const picture = userJson.results[0].picture.medium;
@@ -75,4 +71,25 @@ async function getReviewerData() {
 function createReview(reviewerData) {
     const review = `<div class="review" id="review"><div class="reviewer" id="reviewer"><img src="${reviewerData.picture}" alt="Reviewers profile photo" class="reviewer-photo" id="reviewer-photo"><h3 class="reviewer-name" id="reviewer-name">${reviewerData.name}</h3></div><p class="lorem sm">${reviewerData.reviewMessage}</p></div>`;
     reviews.innerHTML += review;
+    loadingSpinner.classList.remove('animation-loadReviews');
+}
+
+function elementInViewport(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+
+    while (el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+    }
+
+    return (
+        top < (window.pageYOffset + window.innerHeight) &&
+        left < (window.pageXOffset + window.innerWidth) &&
+        (top + height) > window.pageYOffset &&
+        (left + width) > window.pageXOffset
+    );
 }
