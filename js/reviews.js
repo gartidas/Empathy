@@ -22,9 +22,11 @@ navbarOverlay.addEventListener('click', () => {
 }, false)
 
 window.addEventListener('load', (event) => {
-    getReviewerData();
-    getReviewerData();
-    getReviewerData();
+    Promise.all([
+        getReviewerData(),
+        getReviewerData(),
+        getReviewerData()
+    ])
 });
 
 function openNavbar() {
