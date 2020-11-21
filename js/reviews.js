@@ -51,7 +51,7 @@ async function getReviewerData() {
     const name = userJson.results[0].name.first + " " + userJson.results[0].name.last;
     const picture = userJson.results[0].picture.medium;
 
-    const reviewResponse = await fetch('http://www.randomtext.me/api/gibberish/p-1/20-38');
+    const reviewResponse = await fetch('https://www.randomtext.me/api/gibberish/p-1/20-38');
     const reviewJson = await reviewResponse.json();
     const reviewMessage = reviewJson.text_out;
 
