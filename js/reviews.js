@@ -73,8 +73,6 @@ async function getReviewerData() {
 }
 
 function createReview(reviewerData) {
-    const review = document.createElement('div');
-    review.classList.add('review');
-    review.innerHTML = `<div class="reviewer" id="reviewer"><img src="${reviewerData.picture}" alt="Reviewers profile photo" class="reviewer-photo" id="reviewer-photo"><h3 class="reviewer-name" id="reviewer-name">${reviewerData.name}</h3></div><p class="lorem sm">${reviewerData.reviewMessage}</p>`;
-    reviews.appendChild(review);
+    const review = `<div class="review" id="review"><div class="reviewer" id="reviewer"><img src="${reviewerData.picture}" alt="Reviewers profile photo" class="reviewer-photo" id="reviewer-photo"><h3 class="reviewer-name" id="reviewer-name">${reviewerData.name}</h3></div><p class="lorem sm">${reviewerData.reviewMessage}</p></div>`;
+    reviews.innerHTML += review;
 }
