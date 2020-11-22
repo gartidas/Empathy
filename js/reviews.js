@@ -8,6 +8,10 @@ let lastRun = null;
 let reviews = document.getElementById('reviews');
 let loadingSpinner = document.getElementById('loading-spinner');
 
+getReviewerData();
+getReviewerData();
+getReviewerData();
+
 showNavBtn.addEventListener('click', () => {
     if (opened) {
         closeNavbar();
@@ -22,14 +26,6 @@ navbarOverlay.addEventListener('click', () => {
         closeNavbar();
     }
 }, false)
-
-window.addEventListener('load', async(event) => {
-    await Promise.all([
-        getReviewerData(),
-        getReviewerData(),
-        getReviewerData()
-    ])
-});
 
 window.addEventListener('scroll', (event) => {
     if (elementInViewport(loadingSpinner)) {
