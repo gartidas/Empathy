@@ -4,6 +4,7 @@ let navbarOverlay = document.getElementById('navbar-overlay');
 let nav = document.getElementById('nav');
 let opened = false;
 
+let lastRun = null;
 let reviews = document.getElementById('reviews');
 let loadingSpinner = document.getElementById('loading-spinner');
 
@@ -30,10 +31,10 @@ window.addEventListener('load', async(event) => {
     ])
 });
 
-window.addEventListener('scroll', async(event) => {
+window.addEventListener('scroll', (event) => {
     if (elementInViewport(loadingSpinner)) {
         loadingSpinner.classList.add('animation-loadReviews');
-        await getReviewerData();
+        loadReview();
     }
 });
 
@@ -53,6 +54,13 @@ function closeNavbar() {
     navbarOverlay.classList.add('animation-hideNavBarOverlay')
     navbarOverlay.style.display = 'none';
     opened = false;
+}
+
+function loadReview() {
+    if (lastRun == null || new Date().getTime() - lastRun > 1000) {
+        getReviewerData();
+    }
+    lastRun = new Date().getTime();
 }
 
 async function getReviewerData() {
