@@ -8,6 +8,8 @@ let lastRun = null;
 let reviews = document.getElementById('reviews');
 let loadingSpinner = document.getElementById('loading-spinner');
 
+let scrollBtn = document.getElementById("scroll-btn");
+
 getReviewerData();
 getReviewerData();
 getReviewerData();
@@ -32,7 +34,22 @@ window.addEventListener('scroll', (event) => {
         loadingSpinner.classList.add('animation-loadReviews');
         loadReview();
     }
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.classList.add('animation-showScrollBtn')
+        scrollBtn.classList.remove('animation-hideScrollBtn')
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.classList.remove('animation-showScrollBtn')
+        scrollBtn.classList.add('animation-hideScrollBtn')
+        setInterval(scrollBtn.style.display = "none", 500);
+    }
 });
+
+scrollBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}, false)
 
 function openNavbar() {
     nav.classList.add('animation-showNavBar')

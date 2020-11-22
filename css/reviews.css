@@ -164,6 +164,26 @@
         margin-right: auto;
         opacity: 0;
     }
+    .scroll-btn {
+        display: none;
+        position: fixed;
+        bottom: 1em;
+        left: .25em;
+        z-index: 3;
+        border: none;
+        outline: none;
+        background: rgb(83, 25, 160) url('../images/scroll-up.png') no-repeat;
+        background-size: 2em 2em;
+        background-position: center;
+        color: white;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .scroll-btn:hover {
+        background-color: rgb(60, 7, 131);
+    }
     .footer p {
         opacity: 0;
         display: none;
@@ -185,10 +205,10 @@
         animation: hideNavBar .2s forwards;
     }
     .animation-showNavBarOverlay {
-        animation: showNavBarOverlay .5s forwards;
+        animation: appear .5s forwards;
     }
     .animation-hideNavBarOverlay {
-        animation: hideNavBarOverlay .5s forwards;
+        animation: disappear .5s forwards;
     }
 }
 
@@ -256,6 +276,12 @@
     .review {
         width: 80%;
     }
+    .scroll-btn {
+        bottom: 1em;
+        left: 1em;
+        width: 3em;
+        height: 3em;
+    }
 }
 
 @media(min-width:1300px) {
@@ -270,6 +296,12 @@
     }
     .hero-bg {
         background-position: 0 90%;
+    }
+    .scroll-btn {
+        bottom: 2em;
+        left: 2em;
+        width: 3.5em;
+        height: 3.5em;
     }
 }
 
@@ -289,13 +321,30 @@
 }
 
 .animation-loadReviews {
-    animation: loadReviews 2s forwards;
+    animation: appear 2s forwards;
+}
+
+.animation-showScrollBtn {
+    animation: appear .5s forwards;
+}
+
+.animation-hideScrollBtn {
+    animation: disappear .5s forwards;
 }
 
 
 /*Animations- definition*/
 
-@keyframes loadReviews {
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
     from {
         opacity: 0;
     }
@@ -330,23 +379,5 @@
     }
     to {
         transform: translateX(0);
-    }
-}
-
-@keyframes showNavBarOverlay {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes hideNavBarOverlay {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
     }
 }
