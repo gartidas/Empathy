@@ -42,13 +42,13 @@ window.addEventListener('scroll', (event) => {
     } else {
         scrollBtn.classList.remove('animation-showScrollBtn')
         scrollBtn.classList.add('animation-hideScrollBtn')
-        setInterval(scrollBtn.style.display = "none", 500);
+        scrollBtn.style.display = "none";
     }
 });
 
 scrollBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollIntoView({ behavior: "smooth" });
+    document.documentElement.scrollIntoView({ behavior: "smooth" });
 }, false)
 
 function openNavbar() {
